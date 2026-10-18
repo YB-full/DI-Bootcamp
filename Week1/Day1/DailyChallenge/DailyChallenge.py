@@ -1,4 +1,4 @@
-from random import random, shuffle
+import random 
 
 
 user_string =input("Enter a string (must be exactly 10 characters long) :")
@@ -13,4 +13,8 @@ else:
     for i in range(10):
         print(user_string[: i+1])
 
-     
+   
+    randomized_str = list(user_string)
+    random.shuffle(randomized_str)
+    #print(randomized_str)
+    print(f"Randomized string: {''.join(randomized_str)}")
