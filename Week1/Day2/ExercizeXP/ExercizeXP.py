@@ -100,7 +100,7 @@ family_cost=[]
 while True:
     age = input(prompt)
     if age == 'quit' or age == " ":
-        break #pbme : doen't break when we enter nothing
+        continue
     if age.isdigit():
         age = int(age)
         if age < 3:
