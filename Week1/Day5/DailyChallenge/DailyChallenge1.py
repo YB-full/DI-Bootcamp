@@ -1,5 +1,5 @@
 #Challenge1 :Sorting
-user_input=input("Enter words :").replace(","," ").strip()
+user_input=input("Enter words :").replace(","," ")
 list_words=(user_input.split())
 sorted_list= sorted(list_words)
 list_coma=",".join(sorted_list)
