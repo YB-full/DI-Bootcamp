@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">Users:</div>
+        <ul class="list">
+            <li>John</li>
+            <li>Pete</li>
+        </ul>
+        <ul class="list">
+            <li>David</li>
+            <li>Sarah</li>
+            <li>Dan</li>
+        </ul>
+    <script>
+        const myDiv=document.querySelector("#container");
+        console.log(myDiv);
+        const firstUl = document.querySelectorAll("ul")[0];
+        const secondLi = firstUl.querySelectorAll("li")[1];
+        secondLi.innerText="Richard";
+        const secondUl = document.querySelectorAll("ul")[1];
+        const secLi = secondUl.querySelectorAll("li")[1];
+        secLi.remove();
+
+        for (let i=0;i<2;i++){
+            let all= document.querySelectorAll("ul")[i];
+            let myName=all.querySelectorAll("li")[0];
+            myName.innerText="Yehoudit";
+
+        }
+        
+        const allUl=document.querySelectorAll("ul");
+        allUl.forEach(element => {
+            element.classList.add("student_list");
+        });
+
+    
+        firstUl.classList.add("university","attendance");
+        myDiv.style.backgroundColor ="lightblue";
+        myDiv.style.padding = "20px";
+
+        const secUl = document.querySelectorAll("ul")[1];
+        const lastLi = secondUl.querySelectorAll("li")[1];
+        lastLi.hidden=true;
+        secondLi.style.border="dotted"
+        const allBody=document.querySelector("body");
+        allBody.style.fontSize="large"
+
+        //Bonus
+        const users=firstUl.querySelectorAll("li");
+        const x=users[0].textContent;
+        const y=users[1].textContent;
+        
+      
+        alert(`Hello ${x} and ${y}`);
+        
+
+        
+    </script>
+</body>
+</html>
