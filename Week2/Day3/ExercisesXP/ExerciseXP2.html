@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="firstname"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lastname"><br><br>
+        <input type="submit" value="Submit" id="submit">
+    </form>    
+<ul class="usersAnswer"></ul>
+<script>
+    const myForm=document.querySelector("form");
+    console.log(myForm);
+
+    const fname=document.querySelector("#fname");
+    const lname=document.querySelector("#lname");
+    const mySubmit=document.querySelector("#submit");
+    console.log(fname,lname,mySubmit);
+
+    const firstName=document.querySelector('[name="firstname"]');
+    const lastName=document.querySelector('[name="lastname"]');
+    console.log(firstName,lastName);
+
+    const myUl=document.querySelector(".usersAnswer");
+    myForm.addEventListener("submit",(event)=>{
+        event.preventDefault();
+        console.log("Bad Entry")
+        let myInputs=document.querySelectorAll("input")
+        myInputs.forEach(element => {
+            let myValue=element.value;
+            if (element.type === "text" && myValue !== ""){
+                let myLi=document.createElement("li");
+                myLi.innerText=myValue;
+                myUl.appendChild(myLi);
+            }    
+        });
+    })
+
+</script>
+</body>
+</html>

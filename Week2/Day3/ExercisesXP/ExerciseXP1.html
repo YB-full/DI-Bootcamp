@@ -1,0 +1,51 @@
+<!--Exercise 1 : Change the article-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <article>
+    <h1> Some Facts </h1>
+    <h2> The Chocolate </h2>
+    <h3> History of the chocolate </h3>
+    <p> Chocolate is made from tropical Theobroma cacao tree seeds. 
+    Its earliest use dates back to the Olmec civilization in Mesoamerica.</p>
+    <p> After the European discovery of the Americas, chocolate became 
+    very popular in the wider world, and its demand exploded. </p>
+    <p> Chocolate has since become a popular food product that millions enjoy every day, 
+    thanks to its unique, rich, and sweet taste.</p> 
+    <p> But what effect does eating chocolate have on our health?</p> 
+</article>
+<script>
+    const myH1=document.querySelector("h1");
+    console.log(myH1.innerHTML);
+    
+    const lastP=document.querySelector('article>p:last-of-type');
+    lastP.remove()
+
+    const myH2=document.querySelector("h2");
+    myH2.addEventListener("click",()=>myH2.style.backgroundColor="red")
+
+    const myH3=document.querySelector("h3");
+    myH3.addEventListener("click",()=>myH3.style.display="none");
+
+    const allP=document.querySelectorAll("p");
+    const myButton= document.createElement("button");
+    const myArticle=document.querySelector("article");
+    myArticle.appendChild(myButton);
+    myButton.innerHTML="Try me !"
+    myButton.addEventListener("click",(e)=>{
+        for(let elem of allP){
+            elem.style.fontWeight="bold";
+        }
+    })
+
+    //Bonus
+    myH1.addEventListener("mouseover",()=>myH1.style.fontSize=Math.floor(Math.random() * 101)+"px");
+    myH2.addEventListener("mouseover",()=>myH2.style.opacity=0.5);
+</script>
+</body>
+</html>
