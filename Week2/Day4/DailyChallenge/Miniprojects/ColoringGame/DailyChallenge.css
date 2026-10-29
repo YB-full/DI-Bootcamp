@@ -1,0 +1,72 @@
+body {
+    min-height: 100vh;
+    background: linear-gradient(to bottom , #c74040, #eda4a4) no-repeat;
+    margin: 0;
+}
+h1 {
+  text-align: center;
+  color: white;
+}
+form {
+  padding: 10px;
+  background-color: white;
+  display: flex;
+  gap: 8px;
+}
+form input {
+  flex: 1;
+  border: none;
+}
+
+form button{
+    border: none;
+    background: transparent;
+    color: #4a9eff;
+    cursor: pointer;
+}
+
+.todo-container {
+  width: 367px;
+  margin: 0 auto;
+}
+
+.listTasks {
+  margin-top: 16px;
+  padding : 10px;
+  background-color: white;
+}
+.listTasks li {
+  list-style: none;      /*masking the dot*/
+  margin: 8px 0;
+}
+.listTasks:empty {
+  display: none;
+}
+.task-done {
+    color: red;
+    text-decoration: line-through;
+}
+.listTasks li button {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  background-color: #ff4b58;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.x-icon {
+  background: transparent;
+}
+.clearButton{
+    border: none;
+    background: transparent;
+    color: #4a9eff;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;    
+}
+
