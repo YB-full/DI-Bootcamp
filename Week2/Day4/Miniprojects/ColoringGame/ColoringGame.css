@@ -1,0 +1,63 @@
+
+body{
+    display:flex;
+    background-color: darkgray;
+    height: 100vh ;
+}
+*{
+    margin: 0;
+    padding:0;
+    box-sizing :border-box;
+}
+
+#grid1{
+    display: flex ;
+    width: 270px;       
+    max-height: 100vh;
+    gap:8px;   
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-left: 8px;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+
+    
+}
+#grid1 > div {
+    width: 80px;
+    height: 80px;
+    border:solid;
+    border-width: thin;
+}
+
+#grid1 > button {
+    width: 300px;  
+    grid-column: 1 / -1;
+    border-radius: 8px;
+    min-width: fit-content;
+    height:50px;
+    cursor: pointer;
+  
+}
+
+#grid2{
+    flex: 1;
+    display: grid;
+    grid-template-columns:repeat(60,1fr);
+    grid-template-rows: repeat(24,1fr);
+    padding-left: 8px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-right: 8px;
+   
+    
+    
+}
+#grid2>div{
+   
+    background-color: white;
+    border:1px lightgray solid;
+    
+}
