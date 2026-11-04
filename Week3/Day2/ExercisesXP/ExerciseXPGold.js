@@ -16,4 +16,5 @@ function keysAndValues(myObject){
 keysAndValues({ a: 1, b: 2, c: 3 })
 keysAndValues({ a: "Apple", b: "Microsoft", c: "Google" })
 keysAndValues({ key1: true, key2: false, key3: undefined })
+
 //Exercise 3 : Counter class
