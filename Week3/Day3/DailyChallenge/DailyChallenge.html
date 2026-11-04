@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="ExerciseXP2.html" method="POST">
+        <div>
+            <input name="firstname" id="firstname" value="John" />    
+            <input name="lastname" id="lastname" value="Doe" />
+            <button type="submit" class="submit-button">Send </button>
+        </div>
+    </form> 
+    <script>
+        const form = document.querySelector('form');
+       
+       form.addEventListener('submit', (event) => {
+           event.preventDefault(); 
+            const myFirstName=document.querySelector("#firstname").value;
+            const myLastName=document.querySelector("#lastname").value;
+            const formData = {
+                firstname: myFirstName,
+                lastname: myLastName
+            };
+            const myJsonForm=JSON.stringify(formData);
+            const myJson=document.createElement("p");
+            myJson.textContent = myJsonForm;
+            
+            document.body.appendChild(myJson);
+
+       });
+    </script>
+</body>
+</html>
