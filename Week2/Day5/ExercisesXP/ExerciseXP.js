@@ -9,7 +9,9 @@ function funcOne() {
 }
 
 // #1.1 - run in the console:
-funcOne()//it will print 3 because the value of a is changed to 3 inside the if block
+funcOne()
+//it will print 3 because the value of a is changed to 3 inside the if block
+//5>1 so a changes to 3
 // #1.2 What will happen if the variable is declared 
 // with const instead of let ?
 //will be an error because const variable cannot be reassigned
@@ -25,12 +27,16 @@ function funcThree() {
 }
 
 // #2.1 - run in the console:
-funcThree()//it will print 0 because the value of a wich is the global value the func can access for now
-funcTwo()//it will change the value of a to 5
-funcThree()//it will print 5 because the value of a is changed to 5 by funcTwo
+funcThree()
+//it will print 0 because the value of the scope we can access for now
+funcTwo()
+//it will change the value of a to 5
+funcThree()
+//it will print 5 because the value of a was reassigned to 5 by funcTwo
 // #2.2 What will happen if the variable is declared 
 // with const instead of let ?
 //will be an error because const variable cannot be reassigned
+//and funcThree() will print 0 because a didn't change
 
 //#3
 function funcFour() {
@@ -43,8 +49,10 @@ function funcFive() {
 }
 
 // #3.1 - run in the console:
-funcFour()//will create a global variable a with value "hello"
-funcFive()//it will print "hello" because the value of a is changed to "hello" by funcFour
+funcFour()
+//will create a global variable a with value "hello"
+funcFive()
+//it will print "hello" because the value of a is changed to "hello" by funcFour
 
 //#4
 let a = 1;
@@ -55,8 +63,9 @@ function funcSix() {
 
 
 // #4.1 - run in the console:
-funcSix()//it will print "test" because the value of a inside the function is "test" 
-//and it is not affected by the global variable a
+funcSix()
+//it will print "test" because the value of a inside the function is "test" 
+//and it is not affected by the global scope a declared outside of the function
 // #4.2 What will happen if the variable is declared 
 // with const instead of let ?
 //will be an error because const variable cannot be reassigned
@@ -70,12 +79,12 @@ if (true) {
 alert(`outside of the if block ${a}`);
 
 // #5.1 - run the code in the console
-//it will print "in the if block 5" because the value of a inside the if block is 5
+//it will print "in the if block 5" because the value of a inside the if block is 5(local scope)
+//and after that "outside of the if block 2" because a in if block is not the same as a outside the if 
 // #5.2 What will happen if the variable is declared 
 // with const instead of let ?
-//will print"in the if block 5" and after that "outside of the if block 2" 
-// because the value of a inside the if block is 5 and the value of a outside the if block is 2
-//and const a in if block is not the same variable as const a outside the if block
+//will be the same thing because the const a declared in the if block is not the 
+//same scope than the one declared outside the if
 
 //Exercise2:Ternary operator
 function winBattle(){
