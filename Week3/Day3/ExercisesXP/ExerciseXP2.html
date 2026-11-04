@@ -1,0 +1,28 @@
+<!-- Exercise 2 : HTML Form #2 -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+      <form action="ExerciseXP2.html" method="POST">
+    <div>
+      <label for="firstname">Name</label>
+      <br>
+      <input name="firstname" id="firstname" value="John" />
+    </div>
+    <div>
+      <label for="comments">Comments</label>
+      <br>
+      <textarea name="comments" id="comments">Hello, this is a comment!</textarea>
+    </div>
+    <div>
+      <button type="submit" class="submit-button">Send </button>
+    </div>
+  </form>
+ </body>
+ </html>
+
+ <!-- will sends the form data in the body of the request, not in the URL we will see the informations in the payload-->
