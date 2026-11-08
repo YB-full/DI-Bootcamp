@@ -1,9 +1,7 @@
 function validateUnionType(value: any, allowedTypes: string[]): boolean{
     let valueType=typeof value;
-    if ( allowedTypes.includes(valueType)){
-        return true;
-    }
-    return false;
+    return allowedTypes.includes(valueType)
+      
 }
 let test1=validateUnionType("Hello", ["string", "number"]);
 let test2=validateUnionType(true, ["string", "number"]);
