@@ -1,0 +1,122 @@
+body{
+  background-color: #3399ff;
+}
+#content {
+    text-align: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 20px;
+}
+
+h1{
+  color: white;
+  font-size: 50px;
+  font-family:  "Comic Sans MS", cursive, sans-serif;
+} 
+
+ #start{
+  color: white;
+  font-size: 20px;
+}
+button{
+  font-size: 35px;
+  border-radius: 25px;
+  background-color: #1a53ff;
+  border-color: #1a53ff;
+  color: white;
+} 
+.toggle-container {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 180px;
+    height: 40px;
+    background-color: lightgrey;
+    border-radius: 20px;
+    cursor: pointer;
+    user-select: none;
+    padding: 2px;
+}
+.toggle-pill {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 88px;
+    height: 36px;
+    background-color: forestgreen;
+    border-radius: 18px;
+    transition: transform 0.3s ease; /* Rend le glissement fluide */
+    z-index: 1;
+}
+.toggle-text {
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    z-index: 2; 
+    transition: color 0.3s ease;
+    width: 88px;
+    text-align: center;
+}
+.toggle-container.is-hard .toggle-pill {
+    transform: translateX(88px);
+    background-color: crimson; 
+}
+.toggle-text.active {
+    color: white;
+}
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    margin: 40px auto;
+    width: fit-content;
+    box-sizing: border-box; 
+    
+}
+
+.cell {
+   
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    color: white; 
+}
+
+[id="0"], [id="3"], [id="6"] {
+    border-right: 4px solid black; 
+}
+
+[id="1"], [id="4"], [id="7"] {
+    border-right: 4px solid black; 
+}
+[id="0"], [id="1"], [id="2"] {
+    border-bottom: 4px solid black; 
+}
+[id="3"], [id="4"], [id="5"] {
+    border-bottom: 4px solid black; 
+}
+
+.endgame {
+  display: none;
+  width: 200px;
+  top: 120px;
+  background-color: rgba(106,165,224, 0.9);
+  position: relative;
+  left: 50%;
+  margin-left: -100px;
+  margin-top: -50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+} 
+
+
