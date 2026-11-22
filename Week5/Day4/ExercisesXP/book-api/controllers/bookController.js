@@ -10,7 +10,7 @@ const getAllBooks = async (req, res) => {
 
 const getBookById=async (req, res) => {
     try {
-        const id = req.params.id;
+        const id = Number(req.params.id);
         const book = await bookModel.getBookById(id);
         if (!book) {
             return res.status(404).json({ message: "Book not found" });
