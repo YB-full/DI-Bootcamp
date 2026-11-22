@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router(); 
-const postController = require('../controllers/bookController');
+const bookController = require('../controllers/bookController');
 
 router.get('/api/books', bookController.getAllBooks);
 router.get('/api/books/:bookId',bookController.getBookById);

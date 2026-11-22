@@ -7,12 +7,12 @@ const getAllBooks=()=>{
 const getBookById=(id)=>{
     return db 
     .select('*')
-    .from('posts')
+    .from('books')
     .where('id',id).first();
 }
 
 const createNewBook=(newTitle,newAuthor,newPublishedYear)=>{
-    return db('posts')
+    return db('books')
     .insert({
         title:newTitle,
         author:newAuthor,

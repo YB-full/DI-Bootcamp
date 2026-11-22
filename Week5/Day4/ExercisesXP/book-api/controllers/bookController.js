@@ -1,4 +1,4 @@
-const postModel = require('../models/bookModel');
+const bookModel = require('../models/bookModel');
 const getAllBooks = async (req, res) => {
     try {
         const books = await bookModel.getAllBooks();
@@ -10,7 +10,7 @@ const getAllBooks = async (req, res) => {
 
 const getBookById=async (req, res) => {
     try {
-        const id = Number(req.params.id);
+        const id = Number(req.params.bookId);
         const book = await bookModel.getBookById(id);
         if (!book) {
             return res.status(404).json({ message: "Book not found" });
